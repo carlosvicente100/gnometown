@@ -10,7 +10,9 @@ const CardContainer = styled.div`
   border-radius: 25px;
   overflow: hidden;
   height: 200px;
+  border: 1px solid black;
   img {
+    border: 1px solid black;
     grid-area: image;
   }
   ul,
@@ -69,7 +71,7 @@ const Card = ({ name, age, thumbnail, height, weight, friends, professions, id }
       if (index < maxElements) {
         return <li key={index}>{element}</li>
       } else if (index === maxElements) {
-        return <li key={index}>...</li>
+        return <li key={index}>and more...</li>
       }
     })
     return newList
@@ -94,18 +96,14 @@ const Card = ({ name, age, thumbnail, height, weight, friends, professions, id }
             {` ${parseFloat(weight).toFixed(2)} kg`}
           </p>
         </div>
-        {professions.length > 0 && (
-          <div className="gnome-professions">
-            <h3>Professions</h3>
-            <ul>{ReduceList(professions)}</ul>
-          </div>
-        )}
-        {friends.length > 0 && (
-          <div className="gnome-friends">
-            <h3>Friends</h3>
-            <ul>{ReduceList(friends)}</ul>
-          </div>
-        )}
+        <div className="gnome-professions">
+          <h3>Professions</h3>
+          {professions.length > 0 ? <ul>{ReduceList(professions)}</ul> : <span>¯\_(ツ)_/¯</span>}
+        </div>
+        <div className="gnome-friends">
+          <h3>Friends</h3>
+          {friends.length > 0 ? <ul>{ReduceList(friends)}</ul> : <span>¯\_(ツ)_/¯</span>}
+        </div>
       </CardContainer>
     </Link>
   )

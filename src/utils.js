@@ -1,3 +1,5 @@
+export const DEFAULT_VALUE = ''
+
 export const makePagination = (itemsFiltered) => {
   return itemsFiltered.reduce((result, value, index) => {
     //if (index % 5 !== 0) {
