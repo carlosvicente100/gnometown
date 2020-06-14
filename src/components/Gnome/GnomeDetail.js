@@ -2,10 +2,10 @@ import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
-import Card from '../Gnome/Gnome'
+import ItemList from '../Gnome/GnomeList'
 
 const CardContainer = styled.div`
-  background-color: #dcdde1;
+  background-color: #7f8fa6;
   font-family: 'Helvetica';
   color: black;
   border-radius: 25px;
@@ -39,31 +39,37 @@ const CardContainer = styled.div`
     grid-area: friends;
     text-align:center;
     font-size: 14px;
-    .friends-list{
-        width:100%;
-        //display: inline-flex;
-        justify-content: space-between;
-        a{
-            text-decoration: none;
-            margin: auto;
-        }
-        display: grid;
-        row-gap: 20px;
-        justify-content: center;
-        @media (min-width: 688px) {
-          grid-template-columns: auto auto;
-          justify-content: space-evenly;
-        }
-        @media (min-width: 900px) {
-          grid-template-columns: auto auto auto;
-        }
-        @media (min-width: 1201px) {
-          grid-template-columns: auto auto auto auto;
-        }
-        @media (min-width: 1501px) {
-          grid-template-columns: auto auto auto auto auto;
-        }
+    .ItemList{
+      margin:0px;
     }
+
+    // .friends-list{
+    //     width:100%;
+    //     //display: inline-flex;
+    //     justify-content: space-between;
+    //     a{
+    //         text-decoration: none;
+    //         margin: auto;
+    
+    //     }
+    //     display: grid;
+    //     row-gap: 20px;
+    //     justify-content: center;
+    //     @media (min-width: 688px) {
+    //      // grid-template-columns: auto auto;
+    //       //justify-content: space-evenly;
+    //     }
+    //     @media (min-width: 900px) {
+    //     //  grid-template-columns: auto auto auto;
+    //     }
+    //     @media (min-width: 1201px) {
+    //       justify-content: space-evenly;
+    //       grid-template-columns: auto auto auto auto;
+    //     }
+    //     @media (min-width: 1501px) {
+    //       grid-template-columns: auto auto auto auto auto;
+    //     }
+    // }
   }
   .properties {
     grid-area: properties;
@@ -134,11 +140,7 @@ const GnomeDetail = ({ name, age, thumbnail, height, weight, friends, profession
       {friends.length > 0 && (
         <div className="gnome-friends">
           <h3>Friends</h3>
-          <div className="friends-list">
-            {friends.map((friend, index) => (
-              <Card {...friend} />
-            ))}
-          </div>
+          <ItemList items={friends}></ItemList>
         </div>
       )}
     </CardContainer>

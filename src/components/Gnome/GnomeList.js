@@ -9,25 +9,29 @@ const ItemListContainer = styled.div`
   grid-template-columns: auto;
   margin: auto;
   column-gap: 20px;
-  row-gap: 20px;
-  margin-inline-start: 20px;
-  margin-inline-end: 20px;
-  margin-bottom: 20px;
+  row-gap: 5px;
+  margin: 20px;
 
   a {
     text-decoration: none;
     width: fit-content;
     margin: auto;
+
+    margin: 0;
+    width: 100%;
   }
 
   @media (min-width: 688px) {
-    grid-template-columns: auto auto;
   }
   @media (min-width: 900px) {
-    grid-template-columns: auto auto auto;
   }
   @media (min-width: 1201px) {
+    row-gap: 20px;
     grid-template-columns: auto auto auto auto;
+    a {
+      width: fit-content;
+      margin: auto;
+    }
   }
   @media (min-width: 1501px) {
     grid-template-columns: auto auto auto auto auto;
