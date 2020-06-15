@@ -3,13 +3,18 @@ import styled from 'styled-components'
 import { useSelector } from 'react-redux'
 import PropTypes from 'prop-types'
 
-import { makePagination } from '../../utils'
+import { makePagination, filterByJob, filterByName } from '../../utils/filters'
 import Banner from '../Banner/Banner'
 import ItemList from '../Gnome/gnomeList'
-import Pagination from '../Pagination'
+import Pagination from '../Pagination/Pagination'
+import Filters from '../Filters/Filters'
 
-//at the moment, not used
 const HomeContainer = styled.div`
+  text-align: center;
+  font-family: Helvetica;
+`
+//at the moment, not used
+const HomeContainer2 = styled.div`
   font-family: verdana;
   height: -webkit-fill-available;
   height: 98vh;
@@ -47,25 +52,28 @@ const HomeContainer = styled.div`
 const Home = () => {
   const [currentPage, setCurrentPage] = useState(0)
   const { gnomes = [], error } = useSelector((state) => state.gnomesReducer)
-  const { startDate, endDate } = useSelector((state) => state.filtersReducer)
+  const { jobList, name, endDate } = useSelector((state) => state.filtersReducer)
   let gnomesFiltered = gnomes // []
+
   //filter
-  /* if (gnomes.length > 0) {
-        gnomesFiltered = filterByDate(startDate, endDate, items)
-      }*/
+  if (gnomes.length > 0) {
+    gnomesFiltered = filterByJob(jobList, gnomesFiltered)
+    if (name !== '') {
+      gnomesFiltered = filterByName(name, gnomesFiltered)
+    }
+  }
 
   let paginatedGnomes = makePagination(gnomesFiltered)
 
-  /*
   const updateFilters = () => {
     setCurrentPage(0)
   }
-      */
-  console.log('paginatedGnomes', paginatedGnomes)
 
   return (
-    <>
+    <HomeContainer>
       <Banner isHome={true}></Banner>
+      <Filters updateFilters={updateFilters}></Filters>
+      <div className="gnomes-length">{`Current Gnomes: ${gnomesFiltered.length}`}</div>
       {paginatedGnomes.length > 0 ? (
         <>
           <ItemList items={paginatedGnomes[currentPage]}></ItemList>
@@ -82,7 +90,7 @@ const Home = () => {
           </p>
         </div>
       )}
-    </>
+    </HomeContainer>
   )
 }
 

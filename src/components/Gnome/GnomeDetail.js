@@ -13,11 +13,6 @@ const CardContainer = styled.div`
   height: 100%;
   display: grid;
   column-gap: 10px;
-  grid-template-areas:
-    'image title title'
-    'image properties jobs'
-    'friends friends friends';
-    '. . .';
   img {
     grid-area: image;
   }
@@ -32,50 +27,63 @@ const CardContainer = styled.div`
     text-transform: uppercase;
   }
   .gnome-professions {
+    margin: 20px 0px;
     grid-area: jobs;
     font-size: 14px;
+    ul {
+      list-style: none;
+      text-align: left;
+      width: 20%;
+      margin: auto;
+      text-align: left;
+      li {
+        width: fit-content;
+      }
+    }
   }
   .gnome-friends {
     grid-area: friends;
-    text-align:center;
+    text-align: center;
     font-size: 14px;
-    .ItemList{
-      margin:0px;
+    .ItemList {
+      margin: 0px;
     }
-
-    // .friends-list{
-    //     width:100%;
-    //     //display: inline-flex;
-    //     justify-content: space-between;
-    //     a{
-    //         text-decoration: none;
-    //         margin: auto;
-    
-    //     }
-    //     display: grid;
-    //     row-gap: 20px;
-    //     justify-content: center;
-    //     @media (min-width: 688px) {
-    //      // grid-template-columns: auto auto;
-    //       //justify-content: space-evenly;
-    //     }
-    //     @media (min-width: 900px) {
-    //     //  grid-template-columns: auto auto auto;
-    //     }
-    //     @media (min-width: 1201px) {
-    //       justify-content: space-evenly;
-    //       grid-template-columns: auto auto auto auto;
-    //     }
-    //     @media (min-width: 1501px) {
-    //       grid-template-columns: auto auto auto auto auto;
-    //     }
-    // }
   }
+  text-align: center;
+  grid-row-gap: 20px;
+  grid-template-areas:
+    '.image .'
+    '. title .'
+    '. properties .'
+    '. jobs .'
+    'friends friends friends';
+
+  @media (min-width: 688px) {
+    //justify-content: space-evenly;
+  }
+  @media (min-width: 900px) {
+    //  grid-template-columns: auto auto auto;
+  }
+  @media (min-width: 1201px) {
+    // grid-template-areas:
+    //   'image title .'
+    //   'image properties jobs'
+    //   'friends friends friends';
+    // //justify-content: space-evenly;
+    // grid-template-columns: auto auto auto;
+  }
+  @media (min-width: 1501px) {
+  }
+
   .properties {
     grid-area: properties;
     font-size: 14px;
-    span{
-      font-weight:bold;
+    p {
+      display: flex;
+      justify-content: space-evenly;
+    }
+    span {
+      font-weight: bold;
     }
   }
   padding: 20px;
@@ -86,14 +94,14 @@ const CardImage = styled.img`
   height: 200px;
   margin: auto;
   width: 200px;
-  border-radius: 25px;
+  border-radius: 100px;
 `
 
 const GnomeDetail = ({ name, age, thumbnail, height, weight, friends, professions, hair_color }) => {
-  console.log('friends!!!!!!', friends)
-
   const HairContainer = styled.div`
     display: inline-flex;
+    margin: auto;
+    width: fit-content;
     .dummy {
       margin: auto;
       margin-left: 5px;
@@ -110,7 +118,7 @@ const GnomeDetail = ({ name, age, thumbnail, height, weight, friends, profession
       <h2>{name}</h2>
       <div className="properties">
         <p>
-          <span>Age:</span>
+          <span>Age: </span>
           {`${age} years`}
         </p>
         <p>
@@ -129,7 +137,7 @@ const GnomeDetail = ({ name, age, thumbnail, height, weight, friends, profession
 
       {professions.length > 0 && (
         <div className="gnome-professions">
-          <h3>Professions</h3>
+          <h3>Professions </h3>
           <ul>
             {professions.map((element, index) => (
               <li key={index}>{element}</li>

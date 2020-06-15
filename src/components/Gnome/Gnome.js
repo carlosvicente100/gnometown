@@ -20,6 +20,7 @@ const CardContainer = styled.div`
   }
   .name {
     grid-area: gnome-name;
+    text-align: center;
     margin: auto;
   }
   .properties {
@@ -66,7 +67,8 @@ const CardContainer = styled.div`
     grid-template-rows: auto;
     .name{
         font-size: 10px;
-
+        margin-left: 5px;
+        text-align: justify;
       }
     }
     .properties,
@@ -75,10 +77,15 @@ const CardContainer = styled.div`
       display: none;
     }
 
+    .properties-small{
+      width: fit-content;
+    text-align: center;
+    }
+
     .properties-small,
     .professions-small,
     .friends-small {
-      margin: auto;
+      margin: auto 5px;
       display: inline-flex;
       i{
         margin: 0px 10px;
@@ -87,8 +94,9 @@ const CardContainer = styled.div`
     grid-template-areas: 'image gnome-name properties jobs friends';
     display: inline-grid;
     img {
-      width: 50px;
-      height: 50px;
+      width: 40px;
+      height: 40px;
+      margin-left: 5px;
     }
   }
   @media (min-width: 1201px) {
@@ -100,6 +108,7 @@ const CardContainer = styled.div`
     }
 
     img {
+      margin: auto;
       width: 90px;
       height: 90px;
     }
@@ -107,15 +116,14 @@ const CardContainer = styled.div`
     .name {
       font-size: 14px;
     }
-    .properties {
+    .professions, .friends, .properties {
       display: block;
+      ul{
+
+        list-style: none;
+      }
     }
-    .professions {
-      display: block;
-    }
-    .friends {
-      display: block;
-    }
+    
     grid-template-areas:
       '. image .'
       '. gnome-name .'
@@ -165,16 +173,16 @@ const Card = ({ name, age, thumbnail, height, weight, friends, professions, id }
         </div>
         <div className="properties-small">
           <div className="age">
-            <i class="fas fa-hourglass-end"></i>
-            {` ${age} `}
+            <i className="fas fa-birthday-cake"></i>
+            <span>{` ${age} `}</span>
           </div>
           <div className="height">
-            <i class="fas fa-arrows-alt-v"></i>
-            {`${parseFloat(height).toFixed(2)}`}
+            <i className="fas fa-arrows-alt-v"></i>
+            <span>{`${parseFloat(height).toFixed(2)}`}</span>
           </div>
           <div className="weight">
-            <i class="fas fa-arrows-alt-h"></i>
-            {` ${parseFloat(weight).toFixed(2)} `}
+            <i className="fas fa-weight-hanging"></i>
+            <span>{` ${parseFloat(weight).toFixed(2)} `}</span>
           </div>
         </div>
         <div className="professions">
@@ -182,7 +190,7 @@ const Card = ({ name, age, thumbnail, height, weight, friends, professions, id }
           {professions.length > 0 ? <ul>{ReduceList(professions)}</ul> : <span>¯\_(ツ)_/¯</span>}
         </div>
         <div className="professions-small">
-          <i class="fas fa-hammer"></i>
+          <i className="fas fa-hammer"></i>
           <span>{professions.length > 0 ? professions.length : 0} </span>
         </div>
         <div className="friends">
@@ -190,7 +198,7 @@ const Card = ({ name, age, thumbnail, height, weight, friends, professions, id }
           {friends.length > 0 ? <ul>{ReduceList(friends)}</ul> : <span>¯\_(ツ)_/¯</span>}
         </div>
         <div className="friends-small">
-          <i class="fas fa-users"></i>
+          <i className="fas fa-users"></i>
           <span>{friends.length > 0 ? friends.length : 0} </span>
         </div>
       </CardContainer>
