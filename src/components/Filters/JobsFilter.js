@@ -10,6 +10,11 @@ display: flex;
 flex-wrap: wrap;
 background-color:#8395a7;
 color:white;
+text-align:center;
+i{
+  color:black;
+  margin: 5px 0px;
+}
 }
 `
 const JobOption = styled.div`
@@ -47,7 +52,7 @@ const JobsFilter = ({ list, activeList, onSelect, onClear }) => {
       {list.length > 0 && (
         <JobList>
           <OptionList></OptionList>
-          <button onClick={handleReset}>Reset Filter</button>
+          <i className="fas fa-eraser" onClick={handleReset}></i>
         </JobList>
       )}
     </div>

@@ -24,8 +24,8 @@ export const makePagination = (itemsFiltered) => {
   }, [])
 }
 
-export const filterByJob = (jobs, users) => {
-  let gnomesWithJobs = users.filter((user) => {
+export const filterByJob = (jobs, gnomes) => {
+  const gnomesWithJobs = gnomes.filter((user) => {
     if (jobs.every((job) => user.professions.includes(job))) {
       return user
     } else {
@@ -33,4 +33,10 @@ export const filterByJob = (jobs, users) => {
     }
   })
   return gnomesWithJobs
+}
+
+export const filterByName = (name, gnomes) => {
+  const gnomesWithName = gnomes.filter((gnome) => gnome.name.toLowerCase().includes(name.toLowerCase()))
+  console.log('gnomesWithName', gnomesWithName)
+  return gnomesWithName
 }

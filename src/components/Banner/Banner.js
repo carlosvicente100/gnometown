@@ -12,8 +12,10 @@ export const BannerContainer = styled.div`
   display: grid;
   grid-template-columns: 15% 35% 35% 15%;
   grid-template-areas: '. m-town-name m-town-name m-filter';
+  margin-bottom: 20px;
 
   label {
+    text-align: center;
     grid-area: m-town-name;
     font-family: 'Helvetica';
     font-weight: 300;

@@ -8,6 +8,8 @@ export const fetchFailedGnomes = 'FETCH_FAILED_GNOMES'
 //filters
 export const fetchSetJobList = 'FETCH_SET_JOB_LIST'
 export const fetchSetJobListFilter = 'FETCH_SET_JOB_LIST_FILTER'
+export const fetchSetName = 'FETCH_SET_NAME_FILTER'
+export const fetchResetFilters = 'FETCH_RESET_FILTERS'
 
 export const setAgeFromTo = 'SET_AGE_FROM_TO'
 export const setAgeFrom = 'SET_AGE_FROM'
