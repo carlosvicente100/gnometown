@@ -45,7 +45,7 @@ describe('JobsFilter Structure', () => {
   })
 
   test('Should can active more filters -  onSelect', () => {
-    const { getAllByTestId, getByTestId } = render(<JobsFilter {...dummyProps} />)
+    const { getAllByTestId } = render(<JobsFilter {...dummyProps} />)
     const jobList = getAllByTestId('job-option')
 
     fireEvent.click(jobList[4].children[0])

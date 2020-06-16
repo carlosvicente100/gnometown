@@ -16,11 +16,20 @@ const NameFilter = ({ onChange, current }) => {
   }
   return (
     <div>
-      <InputName type="text" onChange={handleChange} value={current} placeholder="Gnome Name" />
+      <InputName
+        data-testid="filter-name-input"
+        type="text"
+        onChange={handleChange}
+        value={current}
+        placeholder="Gnome Name"
+      />
     </div>
   )
 }
 
-NameFilter.propTypes = {}
+NameFilter.propTypes = {
+  onChange: PropTypes.func.isRequired,
+  current: PropTypes.string.isRequired
+}
 
 export default NameFilter

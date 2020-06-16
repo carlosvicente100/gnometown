@@ -1,0 +1,316 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Gnome Component Suite Snapshot check 1`] = `
+.c0 {
+  font-family: Helvetica;
+  background-color: #edeff6;
+  color: black;
+  border-radius: 25px;
+  overflow: hidden;
+  display: grid;
+  height: 400px;
+  grid-template-areas: '. image .' '. gnome-name .' '. properties .' '. jobs .' '. friends .';
+  width: 230px;
+  margin: auto;
+  grid-template-areas: 'image gnome-name properties jobs friends';
+  display: inline-grid;
+}
+
+.c0 img {
+  border: 1px solid black;
+  grid-area: image;
+}
+
+.c0 ul,
+.c0 h3 {
+  margin: 2px;
+  text-align: left;
+}
+
+.c0 .name {
+  grid-area: gnome-name;
+  text-align: center;
+  margin: auto;
+}
+
+.c0 .properties {
+  display: block;
+  grid-area: properties;
+  font-size: 14px;
+  text-align: left;
+}
+
+.c0 .properties span {
+  font-weight: bold;
+}
+
+.c0 .properties p {
+  margin: auto;
+}
+
+.c0 .professions {
+  display: block;
+  grid-area: jobs;
+  font-size: 14px;
+}
+
+.c0 .friends {
+  display: block;
+  grid-area: friends;
+  font-size: 14px;
+}
+
+.c0 .properties,
+.c0 .professions,
+.c0 .friends {
+  display: none;
+}
+
+.c0 .properties-small {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-align: center;
+}
+
+.c0 .properties-small,
+.c0 .professions-small,
+.c0 .friends-small {
+  margin: auto 5px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.c0 .properties-small i,
+.c0 .professions-small i,
+.c0 .friends-small i {
+  margin: 0px 10px;
+}
+
+.c0 img {
+  width: 40px;
+  height: 40px;
+  margin-left: 5px;
+}
+
+.c1 {
+  height: 90px;
+  margin: auto;
+  width: 90px;
+  border-radius: 100px;
+}
+
+@media (max-width:1201px) {
+  .c0 {
+    font-size: 13px;
+    width: 100%;
+    height: 80px;
+    grid-template-columns: auto 80px auto auto auto;
+    grid-template-rows: auto;
+  }
+
+  .c0 .name {
+    font-size: 10px;
+    margin-left: 5px;
+    text-align: justify;
+  }
+}
+
+@media (min-width:1201px) {
+  .c0 {
+    grid-template-areas: '. image .' '. gnome-name .' '. properties .' '. jobs .' '. friends .';
+  }
+
+  .c0 .properties-small,
+  .c0 .professions-small,
+  .c0 .friends-small {
+    margin: auto;
+    display: none;
+  }
+
+  .c0 img {
+    margin: auto;
+    width: 90px;
+    height: 90px;
+  }
+
+  .c0 .name {
+    font-size: 14px;
+  }
+
+  .c0 .professions,
+  .c0 .friends,
+  .c0 .properties {
+    display: block;
+  }
+
+  .c0 .professions ul,
+  .c0 .friends ul,
+  .c0 .properties ul {
+    list-style: none;
+  }
+}
+
+<a
+  data-testid="gnome-url"
+  href="/profile/1337"
+  onClick={[Function]}
+>
+  <div
+    className="c0"
+  >
+    <img
+      className="c1"
+      data-testid="gnome-image"
+      src="http://placekitten.com/200/300"
+    />
+    <h2
+      className="name"
+      data-testid="gnome-name"
+    >
+      dummy Name
+    </h2>
+    <div
+      className="properties"
+    >
+      <p
+        data-testid="gnome-age"
+      >
+        <span>
+          Age:
+        </span>
+         240 years
+      </p>
+      <p
+        data-testid="gnome-height"
+      >
+        <span>
+          Height:
+        </span>
+        127.89 cm
+      </p>
+      <p
+        data-testid="gnome-weight"
+      >
+        <span>
+          Weight:
+        </span>
+         40.98 kg
+      </p>
+    </div>
+    <div
+      className="properties-small"
+    >
+      <div
+        className="age"
+        data-testid="gnome-small-age"
+      >
+        <i
+          className="fas fa-birthday-cake"
+        />
+        <span>
+           240 
+        </span>
+      </div>
+      <div
+        className="height"
+        data-testid="gnome-height"
+      >
+        <i
+          className="fas fa-arrows-alt-v"
+        />
+        <span>
+          127.89
+        </span>
+      </div>
+      <div
+        className="weight"
+        data-testid="gnome-small-weight"
+      >
+        <i
+          className="fas fa-weight-hanging"
+        />
+        <span>
+           40.98 
+        </span>
+      </div>
+    </div>
+    <div
+      className="professions"
+      data-testid="gnome-professions"
+    >
+      <h3>
+        Professions
+      </h3>
+      <ul>
+        <li
+          className="job-element"
+        >
+          Carpenter
+        </li>
+        <li
+          className="job-element"
+        >
+          Farmer
+        </li>
+        <li
+          className="job-element"
+        >
+          Stonecarver
+        </li>
+        <li
+          className="job-element"
+        >
+          and more...
+        </li>
+      </ul>
+    </div>
+    <div
+      className="professions-small"
+      data-testid="gnome-small-professions"
+    >
+      <i
+        className="fas fa-hammer"
+      />
+      <span>
+        6
+         
+      </span>
+    </div>
+    <div
+      className="friends"
+      data-testid="gnome-friends"
+    >
+      <h3>
+        Friends
+      </h3>
+      <ul>
+        <li
+          className="friend-element"
+        >
+          Sarabink Tinkbuster
+        </li>
+        <li
+          className="friend-element"
+        >
+          Tinadette Wrongslicer
+        </li>
+      </ul>
+    </div>
+    <div
+      className="friends-small"
+      data-testid="gnome-small-friends"
+    >
+      <i
+        className="fas fa-users"
+      />
+      <span>
+        2
+         
+      </span>
+    </div>
+  </div>
+</a>
+`;

@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NameFilter Component Suite Snapshot check 1`] = `
+.c0 {
+  width: -webkit-fill-available;
+  height: 40px;
+  font-size: 28px;
+  margin: 20px;
+}
+
+<div>
+  <input
+    className="c0"
+    data-testid="filter-name-input"
+    onChange={[Function]}
+    placeholder="Gnome Name"
+    type="text"
+    value="Dummy Name"
+  />
+</div>
+`;
