@@ -69,7 +69,7 @@ describe('Filters Structure', () => {
     expect(filterContainer.children.length).toBe(0)
   })
 
-  test('Should have Buttons with prop active  - with active filters', async () => {
+  test('Should have Buttons with prop active  - with active filters', () => {
     const dummyCityName = 'FunkyTown'
     const store = createStore(() => ({
       filtersReducer: {

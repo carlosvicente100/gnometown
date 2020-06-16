@@ -1,0 +1,146 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`JobsFilter Component Suite Snapshot check 1`] = `
+.c0 {
+  font-family: Helvetica;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  background-color: #8395a7;
+  color: white;
+  text-align: center;
+}
+
+.c0 i {
+  color: black;
+  margin: 5px 0px;
+}
+
+.c1 {
+  margin: 5px 15px;
+}
+
+<div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      data-testid="job-option"
+    >
+      <input
+        checked={true}
+        id="Carpenter"
+        onChange={[Function]}
+        type="checkbox"
+        value="Carpenter"
+      />
+      <label
+        htmlFor="Carpenter"
+      >
+         
+        Carpenter
+      </label>
+    </div>
+    <div
+      className="c1"
+      data-testid="job-option"
+    >
+      <input
+        checked={false}
+        id="Farmer"
+        onChange={[Function]}
+        type="checkbox"
+        value="Farmer"
+      />
+      <label
+        htmlFor="Farmer"
+      >
+         
+        Farmer
+      </label>
+    </div>
+    <div
+      className="c1"
+      data-testid="job-option"
+    >
+      <input
+        checked={false}
+        id="Stonecarver"
+        onChange={[Function]}
+        type="checkbox"
+        value="Stonecarver"
+      />
+      <label
+        htmlFor="Stonecarver"
+      >
+         
+        Stonecarver
+      </label>
+    </div>
+    <div
+      className="c1"
+      data-testid="job-option"
+    >
+      <input
+        checked={false}
+        id="Brewer"
+        onChange={[Function]}
+        type="checkbox"
+        value="Brewer"
+      />
+      <label
+        htmlFor="Brewer"
+      >
+         
+        Brewer
+      </label>
+    </div>
+    <div
+      className="c1"
+      data-testid="job-option"
+    >
+      <input
+        checked={false}
+        id="Tax inspector"
+        onChange={[Function]}
+        type="checkbox"
+        value="Tax inspector"
+      />
+      <label
+        htmlFor="Tax inspector"
+      >
+         
+        Tax inspector
+      </label>
+    </div>
+    <div
+      className="c1"
+      data-testid="job-option"
+    >
+      <input
+        checked={false}
+        id="Prospector"
+        onChange={[Function]}
+        type="checkbox"
+        value="Prospector"
+      />
+      <label
+        htmlFor="Prospector"
+      >
+         
+        Prospector
+      </label>
+    </div>
+    <i
+      className="fas fa-eraser"
+      data-testid="job-reset"
+      onClick={[Function]}
+    />
+  </div>
+</div>
+`;

@@ -36,7 +36,7 @@ const DataManager = ({ children }) => {
       )}
       {!pending && error && (
         <Error>
-          <label>Error Loading Data, Try it Later</label>
+          <label>We're having problems Searching Gnomes, try it in a few minutes</label>
         </Error>
       )}
       {!pending && !error && <>{children}</>}

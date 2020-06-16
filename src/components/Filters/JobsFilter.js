@@ -31,9 +31,8 @@ const JobsFilter = ({ list, activeList, onSelect, onClear }) => {
 
   const OptionList = () => {
     return list.map((option, key) => {
-      // console.log('active', activeList.includes(option))
       return (
-        <JobOption key={key}>
+        <JobOption key={key} data-testid="job-option">
           <input
             type="checkbox"
             id={option}
@@ -52,13 +51,18 @@ const JobsFilter = ({ list, activeList, onSelect, onClear }) => {
       {list.length > 0 && (
         <JobList>
           <OptionList></OptionList>
-          <i className="fas fa-eraser" onClick={handleReset}></i>
+          <i data-testid="job-reset" className="fas fa-eraser" onClick={handleReset}></i>
         </JobList>
       )}
     </div>
   )
 }
 
-JobsFilter.propTypes = {}
+JobsFilter.propTypes = {
+  list: PropTypes.array.isRequired,
+  activeList: PropTypes.array.isRequired,
+  onSelect: PropTypes.func.isRequired,
+  onClear: PropTypes.func.isRequired
+}
 
 export default JobsFilter
