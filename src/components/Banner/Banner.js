@@ -24,17 +24,23 @@ export const BannerContainer = styled.div`
     justify-self: center;
   }
 `
+export const Back = styled.div`
+  font-size: 20px;
+  margin: 20px;
+`
 
 const Banner = ({ isHome = false }) => {
   const { townName } = useSelector((state) => state.gnomesReducer)
   return (
     <BannerContainer>
       {!isHome && (
-        <Link to={`/`}>
-          <i className="fas fa-home"></i>
-        </Link>
+        <Back data-testid="banner-go-home">
+          <Link to={`/`}>
+            <i className="fas fa-home"></i>
+          </Link>
+        </Back>
       )}
-      <label>{`${townName} citizens`}</label>
+      <label data-testid="banner-town-name">{`${townName} citizens`}</label>
     </BannerContainer>
   )
 }
