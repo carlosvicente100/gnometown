@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
-import ItemList from '../Gnome/GnomeList'
+import GnomeList from '../Gnome/GnomeList'
 
 const CardContainer = styled.div`
   background-color: #7f8fa6;
@@ -45,7 +45,7 @@ const CardContainer = styled.div`
     grid-area: friends;
     text-align: center;
     font-size: 14px;
-    .ItemList {
+    .GnomeList {
       margin: 0px;
     }
   }
@@ -148,7 +148,7 @@ const GnomeDetail = ({ name, age, thumbnail, height, weight, friends, profession
       {friends.length > 0 && (
         <div className="gnome-friends">
           <h3>Friends</h3>
-          <ItemList items={friends}></ItemList>
+          <GnomeList gnomes={friends}></GnomeList>
         </div>
       )}
     </CardContainer>

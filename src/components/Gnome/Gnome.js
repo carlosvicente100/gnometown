@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { Link } from '@reach/router'
 
-const CardContainer = styled.div`
+const GnomeContainer = styled.div`
   font-family: Helvetica;
   background-color: #edeff6;
   color: black;
@@ -133,79 +133,89 @@ const CardContainer = styled.div`
   }
 `
 
-const CardImage = styled.img`
+const GnomeImage = styled.img`
   height: 90px;
   margin: auto;
   width: 90px;
   border-radius: 100px;
 `
 
-const Card = ({ name, age, thumbnail, height, weight, friends, professions, id }) => {
-  const ReduceList = (list, maxElements = 3) => {
+const Gnome = ({ name, age, thumbnail, height, weight, friends, professions, id }) => {
+  const ReduceList = (list, type, maxElements = 3) => {
     const newList = list.map((element, index) => {
       if (index < maxElements) {
-        return <li key={index}>{element}</li>
+        return (
+          <li className={`${type}-element`} key={index}>
+            {element}
+          </li>
+        )
       } else if (index === maxElements) {
-        return <li key={index}>and more...</li>
+        return (
+          <li className={`${type}-element`} key={index}>
+            and more...
+          </li>
+        )
       }
     })
     return newList
   }
 
   return (
-    <Link to={`/profile/${id}`}>
-      <CardContainer>
-        <CardImage src={thumbnail}></CardImage>
-        <h2 className="name">{name}</h2>
+    <Link data-testid="gnome-url" to={`/profile/${id}`}>
+      <GnomeContainer>
+        <GnomeImage data-testid="gnome-image" src={thumbnail}></GnomeImage>
+        <h2 data-testid="gnome-name" className="name">
+          {name}
+        </h2>
         <div className="properties">
-          <p>
+          <p data-testid="gnome-age">
             <span>Age:</span>
             {` ${age} years`}
           </p>
-          <p>
+          <p data-testid="gnome-height">
             <span>Height:</span>
             {`${parseFloat(height).toFixed(2)} cm`}
           </p>
-          <p>
+          <p data-testid="gnome-weight">
             <span>Weight:</span>
             {` ${parseFloat(weight).toFixed(2)} kg`}
           </p>
         </div>
         <div className="properties-small">
-          <div className="age">
+          <div className="age" data-testid="gnome-small-age">
             <i className="fas fa-birthday-cake"></i>
             <span>{` ${age} `}</span>
           </div>
-          <div className="height">
+          <div className="height" data-testid="gnome-height">
             <i className="fas fa-arrows-alt-v"></i>
             <span>{`${parseFloat(height).toFixed(2)}`}</span>
           </div>
-          <div className="weight">
+          <div className="weight" data-testid="gnome-small-weight">
             <i className="fas fa-weight-hanging"></i>
             <span>{` ${parseFloat(weight).toFixed(2)} `}</span>
           </div>
         </div>
-        <div className="professions">
+        <div className="professions" data-testid="gnome-professions">
           <h3>Professions</h3>
-          {professions.length > 0 ? <ul>{ReduceList(professions)}</ul> : <span>¯\_(ツ)_/¯</span>}
+          {professions.length > 0 ? <ul>{ReduceList(professions, 'job')}</ul> : <span>¯\_(ツ)_/¯</span>}
         </div>
-        <div className="professions-small">
+        <div className="professions-small" data-testid="gnome-small-professions">
           <i className="fas fa-hammer"></i>
           <span>{professions.length > 0 ? professions.length : 0} </span>
         </div>
-        <div className="friends">
+        <div className="friends" data-testid="gnome-friends">
           <h3>Friends</h3>
-          {friends.length > 0 ? <ul>{ReduceList(friends)}</ul> : <span>¯\_(ツ)_/¯</span>}
+          {friends.length > 0 ? <ul>{ReduceList(friends, 'friend')}</ul> : <span>¯\_(ツ)_/¯</span>}
         </div>
-        <div className="friends-small">
+        <div className="friends-small" data-testid="gnome-small-friends">
           <i className="fas fa-users"></i>
           <span>{friends.length > 0 ? friends.length : 0} </span>
         </div>
-      </CardContainer>
+      </GnomeContainer>
     </Link>
   )
 }
-Card.propTypes = {
+Gnome.propTypes = {
   name: PropTypes.string.isRequired,
   age: PropTypes.number.isRequired,
   thumbnail: PropTypes.string.isRequired,
@@ -215,6 +225,6 @@ Card.propTypes = {
   professions: PropTypes.array
 }
 
-Card.defaultProps = {}
+Gnome.defaultProps = {}
 
-export default Card
+export default Gnome

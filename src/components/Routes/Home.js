@@ -5,13 +5,21 @@ import PropTypes from 'prop-types'
 
 import { makePagination, filterByJob, filterByName } from '../../utils/filters'
 import Banner from '../Banner/Banner'
-import ItemList from '../Gnome/gnomeList'
-import Pagination from '../Pagination/Pagination'
+import GnomeList from '../Gnome/GnomeList'
 import Filters from '../Filters/Filters'
+import DataManager from '../DataManager.js'
 
 const HomeContainer = styled.div`
   text-align: center;
   font-family: Helvetica;
+  .NoResults {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width 100%;
+    height:300px;
+    grid-area: NoResults;
+  }
 `
 //at the moment, not used
 const HomeContainer2 = styled.div`
@@ -53,7 +61,7 @@ const Home = () => {
   const [currentPage, setCurrentPage] = useState(0)
   const { gnomes = [], error } = useSelector((state) => state.gnomesReducer)
   const { jobList, name, endDate } = useSelector((state) => state.filtersReducer)
-  let gnomesFiltered = gnomes // []
+  let gnomesFiltered = gnomes
 
   //filter
   if (gnomes.length > 0) {
@@ -63,33 +71,14 @@ const Home = () => {
     }
   }
 
-  let paginatedGnomes = makePagination(gnomesFiltered)
-
-  const updateFilters = () => {
-    setCurrentPage(0)
-  }
-
   return (
     <HomeContainer>
       <Banner isHome={true}></Banner>
-      <Filters updateFilters={updateFilters}></Filters>
+      <Filters></Filters>
       <div className="gnomes-length">{`Current Gnomes: ${gnomesFiltered.length}`}</div>
-      {paginatedGnomes.length > 0 ? (
-        <>
-          <ItemList items={paginatedGnomes[currentPage]}></ItemList>
-          <Pagination
-            setCurrentPage={setCurrentPage}
-            totalPagination={paginatedGnomes}
-            current={currentPage}
-          ></Pagination>
-        </>
-      ) : (
-        <div className="NoResults">
-          <p>
-            {error ? "We're having problems Searching Gnomes, try it in a few minutes" : "no gnomes, don't be exigent "}
-          </p>
-        </div>
-      )}
+      <DataManager>
+        <GnomeList gnomes={gnomesFiltered} gnomesPerPage={20}></GnomeList>
+      </DataManager>
     </HomeContainer>
   )
 }

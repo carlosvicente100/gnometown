@@ -40,11 +40,11 @@ const FilterList = styled.div`
   }
 `
 
-const Filters = ({ updateFilters }) => {
+const Filters = () => {
   const dispatch = useDispatch()
   const { gnomes } = useSelector((state) => state.gnomesReducer)
   const { jobList } = useSelector((state) => state.filtersReducer)
-  const currentJobList = gnomes.length > 0 ? getJobsByUsers(gnomes) : [] //all jobs posibles
+  const currentJobList = gnomes.length > 0 ? getJobsByUsers(gnomes) : []
   const [filteredJobs, setFilteredJobs] = useState(jobList)
   const [jobVisible, setJobVisible] = useState(false)
   const [nameFilter, setNameFilter] = useState('')
@@ -70,13 +70,11 @@ const Filters = ({ updateFilters }) => {
   }
 
   const filterByName = (name) => {
-    console.log('name', name)
     setNameFilter(name)
   }
 
   const removeFilters = () => {
     resetFilter(ALL)
-    // toggleJobFilter(false)
   }
 
   const resetFilter = (filter) => {
@@ -87,7 +85,7 @@ const Filters = ({ updateFilters }) => {
         break
       case ALL:
         console.log('reset all filters!')
-        setFilteredJobs([]) //more filter reset
+        setFilteredJobs([])
         setNameFilter('') //more filter reset
         break
       default:
@@ -96,17 +94,14 @@ const Filters = ({ updateFilters }) => {
   }
 
   useEffect(() => {
-    console.log('useEffect JOBS')
     setJobList()
   }, [filteredJobs])
 
   useEffect(() => {
-    console.log('useEffect NAME')
     setName()
   }, [nameFilter])
 
   const setJobList = () => {
-    updateFilters()
     dispatch({
       type: fetchSetJobList,
       data: {
@@ -115,7 +110,6 @@ const Filters = ({ updateFilters }) => {
     })
   }
   const setName = () => {
-    updateFilters()
     dispatch({
       type: fetchSetName,
       data: {

@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
-import Card from './Gnome'
+import Gnome from './Gnome'
+import GnomePagination from './GnomePagination'
 
 const ItemListContainer = styled.div`
   display: grid;
@@ -38,17 +39,36 @@ const ItemListContainer = styled.div`
   }
 `
 
-const ItemList = ({ items }) => {
+const GnomeList = ({ gnomes, gnomesPerPage = 5 }) => {
+  const [page, setPage] = useState(1)
+
+  const loadMoreUsers = () => {
+    setPage(page + 1)
+  }
+
+  const moreUsers = gnomesPerPage * page >= gnomes.length ? false : true
+
+  console.log('/// gnomes', gnomes)
+  console.log('/// gnomesPerPage', gnomesPerPage)
+
   return (
-    <ItemListContainer className="ItemList">
-      {items.length > 0 ? items.map((item) => <Card key={item.id} {...item} />) : <div>no gnomes founded :(</div>}
-    </ItemListContainer>
+    <>
+      <ItemListContainer className="GnomeList">
+        {gnomes.length > 0 ? (
+          gnomes.filter((a, index) => index < gnomesPerPage * page).map((gnome) => <Gnome key={gnome.id} {...gnome} />)
+        ) : (
+          //  gnomes.map((gnome) => <Gnome key={gnome.id} {...gnome} />)
+          <div>no gnomes founded :(</div>
+        )}
+      </ItemListContainer>
+      {moreUsers && <GnomePagination onClick={loadMoreUsers} />}
+    </>
   )
 }
 
-ItemList.propTypes = {
-  items: PropTypes.array.isRequired
+GnomeList.propTypes = {
+  gnomes: PropTypes.array.isRequired
 }
-ItemList.defaultProps = {}
+GnomeList.defaultProps = {}
 
-export default ItemList
+export default GnomeList

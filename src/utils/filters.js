@@ -1,3 +1,6 @@
+export const DEFAULT_VALUE = ''
+export const JOBS = 'Jobs'
+
 export const getJobsByUsers = (users) => {
   //   console.log('getJobsByUsers', users)
   if (users.length > 0) {
@@ -9,9 +12,6 @@ export const getJobsByUsers = (users) => {
     return []
   }
 }
-
-export const DEFAULT_VALUE = ''
-export const JOBS = 'Jobs'
 
 export const makePagination = (itemsFiltered) => {
   return itemsFiltered.reduce((result, value, index) => {
