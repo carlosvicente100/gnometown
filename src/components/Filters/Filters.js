@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { useSelector, useDispatch } from 'react-redux'
 
@@ -9,11 +8,9 @@ import NameFilter from './NameFilter'
 import { getJobsByUsers, JOBS, ALL } from '../../utils/filters'
 
 //some filters
-//by name
 //by age
 //by height
 //by weight
-//by hairColor ?
 
 const FilterList = styled.div`
   margin: auto;
@@ -43,11 +40,11 @@ const FilterList = styled.div`
 const Filters = () => {
   const dispatch = useDispatch()
   const { gnomes } = useSelector((state) => state.gnomesReducer)
-  const { jobList } = useSelector((state) => state.filtersReducer)
+  const { jobList, name } = useSelector((state) => state.filtersReducer)
   const currentJobList = gnomes.length > 0 ? getJobsByUsers(gnomes) : []
   const [filteredJobs, setFilteredJobs] = useState(jobList)
   const [jobVisible, setJobVisible] = useState(false)
-  const [nameFilter, setNameFilter] = useState('')
+  const [nameFilter, setNameFilter] = useState(name)
   const [nameVisible, setNameVisible] = useState(false)
 
   const haveJobs = () => jobList.length > 0
@@ -80,11 +77,9 @@ const Filters = () => {
   const resetFilter = (filter) => {
     switch (filter) {
       case JOBS:
-        console.log('reset job filters!')
         setFilteredJobs([])
         break
       case ALL:
-        console.log('reset all filters!')
         setFilteredJobs([])
         setNameFilter('') //more filter reset
         break
@@ -121,16 +116,20 @@ const Filters = () => {
     <>
       <FilterList>
         <i
+          data-testid="job-filter-button"
           className={`fas fa-hammer  ${jobVisible ? 'open' : ''} ${haveJobs() ? 'active' : ''} `}
           onClick={() => toggleJobFilter()}
         ></i>
         <i
+          data-testid="name-filter-button"
           className={`fas fa-user ${nameVisible ? 'open' : ''} ${haveName() ? 'active' : ''} `}
           onClick={() => toggleNameFilter()}
         ></i>
-        {(haveJobs() || haveName()) && <i className="fas fa-eraser" onClick={removeFilters}></i>}
+        {(haveJobs() || haveName()) && (
+          <i data-testid="reset-filter-button" className="fas fa-eraser" onClick={removeFilters}></i>
+        )}
       </FilterList>
-      <div className="filterActive">
+      <div data-testid="filter-container" className="filterActive">
         {jobVisible && (
           <JobsFilter list={currentJobList} activeList={jobList} onSelect={updateJobList} onClear={resetFilter} />
         )}

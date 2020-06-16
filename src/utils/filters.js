@@ -2,7 +2,6 @@ export const DEFAULT_VALUE = ''
 export const JOBS = 'Jobs'
 
 export const getJobsByUsers = (users) => {
-  //   console.log('getJobsByUsers', users)
   if (users.length > 0) {
     const profesionList = users
       .map((user) => user.professions)
@@ -37,6 +36,5 @@ export const filterByJob = (jobs, gnomes) => {
 
 export const filterByName = (name, gnomes) => {
   const gnomesWithName = gnomes.filter((gnome) => gnome.name.toLowerCase().includes(name.toLowerCase()))
-  console.log('gnomesWithName', gnomesWithName)
   return gnomesWithName
 }

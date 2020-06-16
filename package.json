@@ -25,7 +25,7 @@
   },
   "scripts": {
     "start": "parcel src/index.html",
-    "test": "react-scripts test"
+    "test": "react-scripts test --env=jsdom-fourteen"
   },
   "keywords": [],
   "author": "",
