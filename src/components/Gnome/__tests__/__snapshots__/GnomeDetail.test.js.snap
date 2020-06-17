@@ -1,0 +1,1027 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Gnome Component Suite Snapshot check 1`] = `
+.c4 {
+  font-family: Helvetica;
+  background-color: #edeff6;
+  color: black;
+  border-radius: 25px;
+  overflow: hidden;
+  display: grid;
+  height: 400px;
+  grid-template-areas: '. image .' '. gnome-name .' '. properties .' '. jobs .' '. friends .';
+  width: 230px;
+  margin: auto;
+  grid-template-areas: 'image gnome-name properties jobs friends';
+  display: inline-grid;
+}
+
+.c4 img {
+  border: 1px solid black;
+  grid-area: image;
+}
+
+.c4 ul,
+.c4 h3 {
+  margin: 2px;
+  text-align: left;
+}
+
+.c4 .name {
+  grid-area: gnome-name;
+  text-align: center;
+  margin: auto;
+}
+
+.c4 .properties {
+  display: block;
+  grid-area: properties;
+  font-size: 14px;
+  text-align: left;
+}
+
+.c4 .properties span {
+  font-weight: bold;
+}
+
+.c4 .properties p {
+  margin: auto;
+}
+
+.c4 .professions {
+  display: block;
+  grid-area: jobs;
+  font-size: 14px;
+}
+
+.c4 .friends {
+  display: block;
+  grid-area: friends;
+  font-size: 14px;
+}
+
+.c4 .properties,
+.c4 .professions,
+.c4 .friends {
+  display: none;
+}
+
+.c4 .properties-small {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-align: center;
+}
+
+.c4 .properties-small,
+.c4 .professions-small,
+.c4 .friends-small {
+  margin: auto 5px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.c4 .properties-small i,
+.c4 .professions-small i,
+.c4 .friends-small i {
+  margin: 0px 10px;
+}
+
+.c4 img {
+  width: 40px;
+  height: 40px;
+  margin-left: 5px;
+}
+
+.c5 {
+  height: 90px;
+  margin: auto;
+  width: 90px;
+  border-radius: 100px;
+}
+
+.c3 {
+  display: grid;
+  grid-template-columns: auto;
+  margin: auto;
+  -webkit-column-gap: 20px;
+  column-gap: 20px;
+  row-gap: 5px;
+  margin: 20px;
+}
+
+.c3 a {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  margin: 0;
+  width: 100%;
+}
+
+.c0 {
+  background-color: #7f8fa6;
+  font-family: 'Helvetica';
+  color: black;
+  border-radius: 25px;
+  overflow: hidden;
+  height: 100%;
+  display: grid;
+  -webkit-column-gap: 10px;
+  column-gap: 10px;
+  text-align: center;
+  grid-row-gap: 20px;
+  grid-template-areas: '.image .' '. title .' '. properties .' '. jobs .' 'friends friends friends';
+  padding: 20px;
+  margin: auto;
+}
+
+.c0 img {
+  grid-area: image;
+}
+
+.c0 ul,
+.c0 h3 {
+  margin: 2px;
+}
+
+.c0 h2 {
+  height: auto;
+  grid-area: title;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.c0 .gnome-professions {
+  margin: 20px 0px;
+  grid-area: jobs;
+  font-size: 14px;
+}
+
+.c0 .gnome-professions ul {
+  list-style: none;
+  text-align: left;
+  width: 20%;
+  margin: auto;
+  text-align: left;
+}
+
+.c0 .gnome-professions ul li {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.c0 .gnome-friends {
+  grid-area: friends;
+  text-align: center;
+  font-size: 14px;
+}
+
+.c0 .gnome-friends .GnomeList {
+  margin: 0px;
+}
+
+.c0 .properties {
+  grid-area: properties;
+  font-size: 14px;
+}
+
+.c0 .properties p {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+  -webkit-justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+}
+
+.c0 .properties span {
+  font-weight: bold;
+}
+
+.c1 {
+  height: 200px;
+  margin: auto;
+  width: 200px;
+  border-radius: 100px;
+}
+
+.c2 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin: auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.c2 .dummy {
+  margin: auto;
+  margin-left: 5px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid black;
+}
+
+@media (max-width:1201px) {
+  .c4 {
+    font-size: 13px;
+    width: 100%;
+    height: 80px;
+    grid-template-columns: auto 80px auto auto auto;
+    grid-template-rows: auto;
+  }
+
+  .c4 .name {
+    font-size: 10px;
+    margin-left: 5px;
+    text-align: justify;
+  }
+}
+
+@media (min-width:1201px) {
+  .c4 {
+    grid-template-areas: '. image .' '. gnome-name .' '. properties .' '. jobs .' '. friends .';
+  }
+
+  .c4 .properties-small,
+  .c4 .professions-small,
+  .c4 .friends-small {
+    margin: auto;
+    display: none;
+  }
+
+  .c4 img {
+    margin: auto;
+    width: 90px;
+    height: 90px;
+  }
+
+  .c4 .name {
+    font-size: 14px;
+  }
+
+  .c4 .professions,
+  .c4 .friends,
+  .c4 .properties {
+    display: block;
+  }
+
+  .c4 .professions ul,
+  .c4 .friends ul,
+  .c4 .properties ul {
+    list-style: none;
+  }
+}
+
+@media (min-width:688px) {
+
+}
+
+@media (min-width:900px) {
+
+}
+
+@media (min-width:1201px) {
+  .c3 {
+    row-gap: 20px;
+    grid-template-columns: auto auto auto auto;
+  }
+
+  .c3 a {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: auto;
+  }
+}
+
+@media (min-width:1501px) {
+  .c3 {
+    grid-template-columns: auto auto auto auto auto;
+  }
+}
+
+<div
+  className="c0"
+>
+  <img
+    className="c1"
+    data-testid="detail-image"
+    src="http://placekitten.com/200/300"
+  />
+  <h2>
+    dummy Name
+  </h2>
+  <div
+    className="properties"
+    data-testid="detail-properties"
+  >
+    <p>
+      <span>
+        Age: 
+      </span>
+      1337 years
+    </p>
+    <p>
+      <span>
+        Height:
+      </span>
+      123.46 cm
+    </p>
+    <p>
+      <span>
+        Weight:
+      </span>
+       12.12 kg
+    </p>
+    <div
+      className="c2"
+    >
+      <p>
+        Hair Color: 
+      </p>
+      <div
+        className="dummy"
+        style={
+          Object {
+            "backgroundColor": "Red",
+          }
+        }
+      />
+    </div>
+  </div>
+  <div
+    className="gnome-professions"
+    data-testid="detail-professions"
+  >
+    <h3>
+      Professions
+    </h3>
+    <ul>
+      <li>
+        Carpenter
+      </li>
+      <li>
+        Farmer
+      </li>
+      <li>
+        Stonecarver
+      </li>
+      <li>
+        Brewer
+      </li>
+      <li>
+        Tax inspector
+      </li>
+      <li>
+        Prospector
+      </li>
+    </ul>
+  </div>
+  <div
+    className="gnome-friends"
+    data-testid="detail-friends"
+  >
+    <h3>
+      Friends
+    </h3>
+    <div
+      className="c3 GnomeList"
+      data-testid="gnome-list-container"
+    >
+      <a
+        data-testid="gnome-url"
+        href="/profile/0"
+        onClick={[Function]}
+      >
+        <div
+          className="c4"
+        >
+          <img
+            className="c5"
+            data-testid="gnome-image"
+            src="http://www.publicdomainpictures.net/pictures/10000/nahled/thinking-monkey-11282237747K8xB.jpg"
+          />
+          <h2
+            className="name"
+            data-testid="gnome-name"
+          >
+            Tobus Quickwhistle
+          </h2>
+          <div
+            className="properties"
+          >
+            <p
+              data-testid="gnome-age"
+            >
+              <span>
+                Age:
+              </span>
+               306 years
+            </p>
+            <p
+              data-testid="gnome-height"
+            >
+              <span>
+                Height:
+              </span>
+              107.76 cm
+            </p>
+            <p
+              data-testid="gnome-weight"
+            >
+              <span>
+                Weight:
+              </span>
+               39.07 kg
+            </p>
+          </div>
+          <div
+            className="properties-small"
+          >
+            <div
+              className="age"
+              data-testid="gnome-small-age"
+            >
+              <i
+                className="fas fa-birthday-cake"
+              />
+              <span>
+                 306 
+              </span>
+            </div>
+            <div
+              className="height"
+              data-testid="gnome-height"
+            >
+              <i
+                className="fas fa-arrows-alt-v"
+              />
+              <span>
+                107.76
+              </span>
+            </div>
+            <div
+              className="weight"
+              data-testid="gnome-small-weight"
+            >
+              <i
+                className="fas fa-weight-hanging"
+              />
+              <span>
+                 39.07 
+              </span>
+            </div>
+          </div>
+          <div
+            className="professions"
+            data-testid="gnome-professions"
+          >
+            <h3>
+              Professions
+            </h3>
+            <ul>
+              <li
+                className="job-element"
+              >
+                Metalworker
+              </li>
+              <li
+                className="job-element"
+              >
+                Woodcarver
+              </li>
+              <li
+                className="job-element"
+              >
+                Stonecarver
+              </li>
+              <li
+                className="job-element"
+              >
+                and more...
+              </li>
+            </ul>
+          </div>
+          <div
+            className="professions-small"
+            data-testid="gnome-small-professions"
+          >
+            <i
+              className="fas fa-hammer"
+            />
+            <span>
+              6
+               
+            </span>
+          </div>
+          <div
+            className="friends"
+            data-testid="gnome-friends"
+          >
+            <h3>
+              Friends
+            </h3>
+            <ul>
+              <li
+                className="friend-element"
+              >
+                Cogwitz Chillwidget
+              </li>
+              <li
+                className="friend-element"
+              >
+                Tinadette Chillbuster
+              </li>
+            </ul>
+          </div>
+          <div
+            className="friends-small"
+            data-testid="gnome-small-friends"
+          >
+            <i
+              className="fas fa-users"
+            />
+            <span>
+              2
+               
+            </span>
+          </div>
+        </div>
+      </a>
+      <a
+        data-testid="gnome-url"
+        href="/profile/1"
+        onClick={[Function]}
+      >
+        <div
+          className="c4"
+        >
+          <img
+            className="c5"
+            data-testid="gnome-image"
+            src="http://www.publicdomainpictures.net/pictures/120000/nahled/white-hen.jpg"
+          />
+          <h2
+            className="name"
+            data-testid="gnome-name"
+          >
+            Fizkin Voidbuster
+          </h2>
+          <div
+            className="properties"
+          >
+            <p
+              data-testid="gnome-age"
+            >
+              <span>
+                Age:
+              </span>
+               288 years
+            </p>
+            <p
+              data-testid="gnome-height"
+            >
+              <span>
+                Height:
+              </span>
+              110.44 cm
+            </p>
+            <p
+              data-testid="gnome-weight"
+            >
+              <span>
+                Weight:
+              </span>
+               35.28 kg
+            </p>
+          </div>
+          <div
+            className="properties-small"
+          >
+            <div
+              className="age"
+              data-testid="gnome-small-age"
+            >
+              <i
+                className="fas fa-birthday-cake"
+              />
+              <span>
+                 288 
+              </span>
+            </div>
+            <div
+              className="height"
+              data-testid="gnome-height"
+            >
+              <i
+                className="fas fa-arrows-alt-v"
+              />
+              <span>
+                110.44
+              </span>
+            </div>
+            <div
+              className="weight"
+              data-testid="gnome-small-weight"
+            >
+              <i
+                className="fas fa-weight-hanging"
+              />
+              <span>
+                 35.28 
+              </span>
+            </div>
+          </div>
+          <div
+            className="professions"
+            data-testid="gnome-professions"
+          >
+            <h3>
+              Professions
+            </h3>
+            <ul>
+              <li
+                className="job-element"
+              >
+                Brewer
+              </li>
+              <li
+                className="job-element"
+              >
+                Medic
+              </li>
+              <li
+                className="job-element"
+              >
+                Prospector
+              </li>
+              <li
+                className="job-element"
+              >
+                and more...
+              </li>
+            </ul>
+          </div>
+          <div
+            className="professions-small"
+            data-testid="gnome-small-professions"
+          >
+            <i
+              className="fas fa-hammer"
+            />
+            <span>
+              6
+               
+            </span>
+          </div>
+          <div
+            className="friends"
+            data-testid="gnome-friends"
+          >
+            <h3>
+              Friends
+            </h3>
+            <span>
+              ¯\\_(ツ)_/¯
+            </span>
+          </div>
+          <div
+            className="friends-small"
+            data-testid="gnome-small-friends"
+          >
+            <i
+              className="fas fa-users"
+            />
+            <span>
+              0
+               
+            </span>
+          </div>
+        </div>
+      </a>
+      <a
+        data-testid="gnome-url"
+        href="/profile/2"
+        onClick={[Function]}
+      >
+        <div
+          className="c4"
+        >
+          <img
+            className="c5"
+            data-testid="gnome-image"
+            src="http://www.publicdomainpictures.net/pictures/30000/nahled/maple-leaves-background.jpg"
+          />
+          <h2
+            className="name"
+            data-testid="gnome-name"
+          >
+            Malbin Chromerocket
+          </h2>
+          <div
+            className="properties"
+          >
+            <p
+              data-testid="gnome-age"
+            >
+              <span>
+                Age:
+              </span>
+               166 years
+            </p>
+            <p
+              data-testid="gnome-height"
+            >
+              <span>
+                Height:
+              </span>
+              106.14 cm
+            </p>
+            <p
+              data-testid="gnome-weight"
+            >
+              <span>
+                Weight:
+              </span>
+               35.89 kg
+            </p>
+          </div>
+          <div
+            className="properties-small"
+          >
+            <div
+              className="age"
+              data-testid="gnome-small-age"
+            >
+              <i
+                className="fas fa-birthday-cake"
+              />
+              <span>
+                 166 
+              </span>
+            </div>
+            <div
+              className="height"
+              data-testid="gnome-height"
+            >
+              <i
+                className="fas fa-arrows-alt-v"
+              />
+              <span>
+                106.14
+              </span>
+            </div>
+            <div
+              className="weight"
+              data-testid="gnome-small-weight"
+            >
+              <i
+                className="fas fa-weight-hanging"
+              />
+              <span>
+                 35.89 
+              </span>
+            </div>
+          </div>
+          <div
+            className="professions"
+            data-testid="gnome-professions"
+          >
+            <h3>
+              Professions
+            </h3>
+            <ul>
+              <li
+                className="job-element"
+              >
+                Cook
+              </li>
+              <li
+                className="job-element"
+              >
+                Baker
+              </li>
+              <li
+                className="job-element"
+              >
+                Miner
+              </li>
+            </ul>
+          </div>
+          <div
+            className="professions-small"
+            data-testid="gnome-small-professions"
+          >
+            <i
+              className="fas fa-hammer"
+            />
+            <span>
+              3
+               
+            </span>
+          </div>
+          <div
+            className="friends"
+            data-testid="gnome-friends"
+          >
+            <h3>
+              Friends
+            </h3>
+            <ul>
+              <li
+                className="friend-element"
+              >
+                Fizwood Voidtossle
+              </li>
+            </ul>
+          </div>
+          <div
+            className="friends-small"
+            data-testid="gnome-small-friends"
+          >
+            <i
+              className="fas fa-users"
+            />
+            <span>
+              1
+               
+            </span>
+          </div>
+        </div>
+      </a>
+      <a
+        data-testid="gnome-url"
+        href="/profile/3"
+        onClick={[Function]}
+      >
+        <div
+          className="c4"
+        >
+          <img
+            className="c5"
+            data-testid="gnome-image"
+            src="http://www.publicdomainpictures.net/pictures/10000/nahled/1-1275919724d1Oh.jpg"
+          />
+          <h2
+            className="name"
+            data-testid="gnome-name"
+          >
+            Midwig Gyroslicer
+          </h2>
+          <div
+            className="properties"
+          >
+            <p
+              data-testid="gnome-age"
+            >
+              <span>
+                Age:
+              </span>
+               240 years
+            </p>
+            <p
+              data-testid="gnome-height"
+            >
+              <span>
+                Height:
+              </span>
+              127.89 cm
+            </p>
+            <p
+              data-testid="gnome-weight"
+            >
+              <span>
+                Weight:
+              </span>
+               40.98 kg
+            </p>
+          </div>
+          <div
+            className="properties-small"
+          >
+            <div
+              className="age"
+              data-testid="gnome-small-age"
+            >
+              <i
+                className="fas fa-birthday-cake"
+              />
+              <span>
+                 240 
+              </span>
+            </div>
+            <div
+              className="height"
+              data-testid="gnome-height"
+            >
+              <i
+                className="fas fa-arrows-alt-v"
+              />
+              <span>
+                127.89
+              </span>
+            </div>
+            <div
+              className="weight"
+              data-testid="gnome-small-weight"
+            >
+              <i
+                className="fas fa-weight-hanging"
+              />
+              <span>
+                 40.98 
+              </span>
+            </div>
+          </div>
+          <div
+            className="professions"
+            data-testid="gnome-professions"
+          >
+            <h3>
+              Professions
+            </h3>
+            <ul>
+              <li
+                className="job-element"
+              >
+                Carpenter
+              </li>
+              <li
+                className="job-element"
+              >
+                Farmer
+              </li>
+              <li
+                className="job-element"
+              >
+                Stonecarver
+              </li>
+              <li
+                className="job-element"
+              >
+                and more...
+              </li>
+            </ul>
+          </div>
+          <div
+            className="professions-small"
+            data-testid="gnome-small-professions"
+          >
+            <i
+              className="fas fa-hammer"
+            />
+            <span>
+              6
+               
+            </span>
+          </div>
+          <div
+            className="friends"
+            data-testid="gnome-friends"
+          >
+            <h3>
+              Friends
+            </h3>
+            <ul>
+              <li
+                className="friend-element"
+              >
+                Sarabink Tinkbuster
+              </li>
+              <li
+                className="friend-element"
+              >
+                Tinadette Wrongslicer
+              </li>
+            </ul>
+          </div>
+          <div
+            className="friends-small"
+            data-testid="gnome-small-friends"
+          >
+            <i
+              className="fas fa-users"
+            />
+            <span>
+              2
+               
+            </span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+`;

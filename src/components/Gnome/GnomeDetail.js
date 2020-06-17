@@ -58,23 +58,6 @@ const CardContainer = styled.div`
     '. jobs .'
     'friends friends friends';
 
-  @media (min-width: 688px) {
-    //justify-content: space-evenly;
-  }
-  @media (min-width: 900px) {
-    //  grid-template-columns: auto auto auto;
-  }
-  @media (min-width: 1201px) {
-    // grid-template-areas:
-    //   'image title .'
-    //   'image properties jobs'
-    //   'friends friends friends';
-    // //justify-content: space-evenly;
-    // grid-template-columns: auto auto auto;
-  }
-  @media (min-width: 1501px) {
-  }
-
   .properties {
     grid-area: properties;
     font-size: 14px;
@@ -97,26 +80,25 @@ const CardImage = styled.img`
   border-radius: 100px;
 `
 
-const GnomeDetail = ({ name, age, thumbnail, height, weight, friends, professions, hair_color }) => {
-  const HairContainer = styled.div`
-    display: inline-flex;
+const HairContainer = styled.div`
+  display: inline-flex;
+  margin: auto;
+  width: fit-content;
+  .dummy {
     margin: auto;
-    width: fit-content;
-    .dummy {
-      margin: auto;
-      margin-left: 5px;
-      background-color: ${hair_color};
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      border: 2px solid black;
-    }
-  `
+    margin-left: 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid black;
+  }
+`
+const GnomeDetail = ({ name, age, thumbnail, height, weight, friends, professions, hair_color }) => {
   return (
     <CardContainer>
-      <CardImage src={thumbnail}></CardImage>
+      <CardImage src={thumbnail} data-testid="detail-image"></CardImage>
       <h2>{name}</h2>
-      <div className="properties">
+      <div className="properties" data-testid="detail-properties">
         <p>
           <span>Age: </span>
           {`${age} years`}
@@ -131,13 +113,13 @@ const GnomeDetail = ({ name, age, thumbnail, height, weight, friends, profession
         </p>
         <HairContainer>
           <p>Hair Color: </p>
-          <div className="dummy" />
+          <div className="dummy" style={{ backgroundColor: hair_color }} />
         </HairContainer>
       </div>
 
       {professions.length > 0 && (
-        <div className="gnome-professions">
-          <h3>Professions </h3>
+        <div className="gnome-professions" data-testid="detail-professions">
+          <h3>Professions</h3>
           <ul>
             {professions.map((element, index) => (
               <li key={index}>{element}</li>
@@ -146,7 +128,7 @@ const GnomeDetail = ({ name, age, thumbnail, height, weight, friends, profession
         </div>
       )}
       {friends.length > 0 && (
-        <div className="gnome-friends">
+        <div className="gnome-friends" data-testid="detail-friends">
           <h3>Friends</h3>
           <GnomeList gnomes={friends}></GnomeList>
         </div>
@@ -158,6 +140,7 @@ GnomeDetail.propTypes = {
   name: PropTypes.string.isRequired,
   age: PropTypes.number.isRequired,
   thumbnail: PropTypes.string.isRequired,
+  hair_color: PropTypes.string.isRequired,
   height: PropTypes.number.isRequired,
   weight: PropTypes.number.isRequired,
   friends: PropTypes.array,

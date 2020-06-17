@@ -225,6 +225,9 @@ Gnome.propTypes = {
   professions: PropTypes.array
 }
 
-Gnome.defaultProps = {}
+Gnome.defaultProps = {
+  friends: [],
+  professions: []
+}
 
 export default Gnome
