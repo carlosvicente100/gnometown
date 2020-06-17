@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
-import { JOBS } from '../../utils/filters'
+import { JOBS } from '../../utils/common'
 
 const JobList = styled.div`
 font-family:Helvetica;

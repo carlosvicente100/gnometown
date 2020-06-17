@@ -19,7 +19,7 @@ export default function reducer(state = initialState, action) {
       }
     case fetchResetFilters:
       return {
-        initialState
+        ...initialState
       }
     default:
       return {

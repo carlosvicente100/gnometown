@@ -5,7 +5,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { fetchSetJobList, fetchSetName } from '../../redux/types'
 import JobsFilter from './JobsFilter'
 import NameFilter from './NameFilter'
-import { getJobsByUsers, JOBS, ALL } from '../../utils/filters'
+import { getJobsByUsers, JOBS, ALL } from '../../utils/common'
 
 //some filters
 //by age

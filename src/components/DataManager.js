@@ -31,7 +31,7 @@ const DataManager = ({ children }) => {
     <>
       {pending && (
         <Loader>
-          <img alt="loading" src="https://loading.io/mod/spinner/lava-lamp/sample.gif" />
+          <img alt="loading" src="https://createwebsite.net/wp-content/uploads/2015/09/Display-Loading.gif" />
         </Loader>
       )}
       {!pending && error && (

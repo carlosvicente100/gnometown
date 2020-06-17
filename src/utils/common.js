@@ -12,17 +12,6 @@ export const getJobsByUsers = (users) => {
   }
 }
 
-export const makePagination = (itemsFiltered) => {
-  return itemsFiltered.reduce((result, value, index) => {
-    if (index % 40 !== 0) {
-      result[result.length - 1].push(value)
-    } else {
-      result.push([value])
-    }
-    return result
-  }, [])
-}
-
 export const filterByJob = (jobs, gnomes) => {
   const gnomesWithJobs = gnomes.filter((user) => {
     if (jobs.every((job) => user.professions.includes(job))) {

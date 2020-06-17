@@ -1,0 +1,178 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home Route Component Home Route Snapshot 1`] = `
+.c1 {
+  position: relative;
+  background: white;
+  width: 100%;
+  height: 72px;
+  display: grid;
+  grid-template-columns: 15% 35% 35% 15%;
+  grid-template-areas: '. m-town-name m-town-name m-filter';
+  margin-bottom: 20px;
+}
+
+.c1 label {
+  text-align: center;
+  grid-area: m-town-name;
+  font-family: 'Helvetica';
+  font-weight: 300;
+  font-size: 34px;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  justify-self: center;
+}
+
+.c3 {
+  display: grid;
+  grid-template-columns: auto;
+  margin: auto;
+  -webkit-column-gap: 20px;
+  column-gap: 20px;
+  row-gap: 5px;
+  margin: 20px;
+}
+
+.c3 a {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  margin: 0;
+  width: 100%;
+}
+
+.c2 {
+  margin: auto;
+  text-align: center;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-size: 28px;
+}
+
+.c2 i {
+  margin: 0 20px;
+  cursor: pointer;
+  border: 1px solid grey;
+  border-radius: 10px;
+  padding: 5px;
+  box-shadow: 1px 1px 5px 0px rgba(50,50,50,0.75);
+}
+
+.c2 .open {
+  color: #ffbe76;
+}
+
+.c2 .active {
+  color: tomato;
+}
+
+.c0 {
+  text-align: center;
+  font-family: Helvetica;
+}
+
+.c0 .NoResults {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 300px;
+  grid-area: NoResults;
+}
+
+@media (min-width:688px) {
+
+}
+
+@media (min-width:900px) {
+
+}
+
+@media (min-width:1201px) {
+  .c3 {
+    row-gap: 20px;
+    grid-template-columns: auto auto auto auto;
+  }
+
+  .c3 a {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: auto;
+  }
+}
+
+@media (min-width:1501px) {
+  .c3 {
+    grid-template-columns: auto auto auto auto auto;
+  }
+}
+
+<body>
+  <div>
+    <div
+      class="c0"
+      data-testid="Home-page"
+    >
+      <div
+        class="c1"
+      >
+        <label
+          data-testid="banner-town-name"
+        >
+           citizens
+        </label>
+      </div>
+      <div
+        class="c2"
+      >
+        <i
+          class="fas fa-hammer    "
+          data-testid="job-filter-button"
+        />
+        <i
+          class="fas fa-user   "
+          data-testid="name-filter-button"
+        />
+      </div>
+      <div
+        class="filterActive"
+        data-testid="filter-container"
+      />
+      <div
+        class="gnomes-length"
+      >
+        Current Gnomes: 0
+      </div>
+      <div
+        class="c3 GnomeList"
+        data-testid="gnome-list-container"
+      >
+        <div>
+          no gnomes founded :(
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+`;

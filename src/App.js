@@ -5,7 +5,6 @@ import { Router } from '@reach/router'
 import Home from './components/Routes/Home'
 import Profile from './components/Routes/Profile'
 import * as types from './redux/types'
-// import DataManager from './components/DataManager';
 
 const App = () => {
   const dispatch = useDispatch()
@@ -19,11 +18,12 @@ const App = () => {
 
   return (
     <React.StrictMode>
-      <Router>
-        <Home path="/" />
-        <Profile path="/profile/:id" />
-        {/* <ProfessionsFinder path="/profession/:name" /> */}
-      </Router>
+      <div>
+        <Router>
+          <Home path="/" />
+          <Profile path="/profile/:id" />
+        </Router>
+      </div>
     </React.StrictMode>
   )
 }

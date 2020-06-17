@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { useSelector } from 'react-redux'
 import PropTypes from 'prop-types'
 
-import { makePagination, filterByJob, filterByName } from '../../utils/filters'
+import { filterByJob, filterByName } from '../../utils/common'
 import Banner from '../Banner/Banner'
 import GnomeList from '../Gnome/GnomeList'
 import Filters from '../Filters/Filters'
@@ -72,7 +72,7 @@ const Home = () => {
   }
 
   return (
-    <HomeContainer>
+    <HomeContainer data-testid="Home-page">
       <Banner isHome={true}></Banner>
       <Filters></Filters>
       <div className="gnomes-length">{`Current Gnomes: ${gnomesFiltered.length}`}</div>

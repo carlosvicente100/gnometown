@@ -41,13 +41,13 @@ const GnomeListContainer = styled.div`
 
 const GnomeList = ({ gnomes, gnomesPerPage = 5 }) => {
   const [page, setPage] = useState(1)
-
+  let moreUsers = false
   const loadMoreUsers = () => {
     setPage(page + 1)
   }
-
-  const moreUsers = gnomesPerPage * page >= gnomes.length ? false : true
-
+  if (gnomes.length > 0) {
+    moreUsers = gnomesPerPage * page >= gnomes.length ? false : true
+  }
   return (
     <>
       <GnomeListContainer className="GnomeList" data-testid="gnome-list-container">

@@ -1,15 +1,15 @@
-import fetch from "cross-fetch";
+import fetch from 'cross-fetch'
 
-export function fetchData(url) {
+export function fetchGeneric(url) {
   return fetch(url)
     .then((response) => response.json())
     .then((response) => {
       if (response.error) {
-        throw response.error;
+        throw response.error
       }
-      return response;
+      return response
     })
     .catch((error) => {
-      return response;
-    });
+      return { error: true }
+    })
 }
