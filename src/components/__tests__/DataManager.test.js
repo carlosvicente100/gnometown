@@ -1,7 +1,7 @@
 import React from 'react'
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
-import { render as rtlRender, fireEvent, screen } from '@testing-library/react'
+import { render as rtlRender } from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect'
 import 'jest-styled-components'
 

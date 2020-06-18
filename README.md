@@ -5,7 +5,7 @@ Gnometown made with React Hooks + Redux and Parcel.
 
 - **React Hooks:** to define all styled components
 - **Redux:** in order to create a store to locate all gnomes and filter settings
-- **Testing:** made with react testing library (unit, integration, snapshots)
+- **Testing:** made with react testing library (unit, integration, snapshots, e2e)
 
 ## Installation
 
@@ -15,9 +15,13 @@ Gnometown made with React Hooks + Redux and Parcel.
 
 - npm run start
 
-## Test
+## Unitary Test 
 
-- npm run test \*
+- npm run test 
+
+## E2E Test 
+
+- npm run cypress:open
 
 
 ## Components
@@ -35,5 +39,6 @@ User can change page to view more gnomes
 ## Dev Dependencies
 
 - **React Testing Library:** to test React Hooks Redux (unit testing and integration tests)
+- **cypress:** to test React Hooks Redux (end to end tests)
 - **Enzyme:** to test some components using shallow, mount & render
 - **Prettier:** to make styled code in a beautiful way

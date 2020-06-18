@@ -1,13 +1,11 @@
-import { call, put, takeEvery } from 'redux-saga/effects'
+import { takeEvery } from 'redux-saga/effects'
 import { fetchRequested, fetchPendingGnomes, fetchSucceededGnomes, fetchFailedGnomes } from '../../types'
 import fetchDataFromUrl, { fetchData } from '../fetch'
-//import { fetchDataGeneric } from '../../../utils'
 
 import * as GenericFetch from '../../../utils/fetch'
-// import * as GenericFetch from '../../../utils/fetch'
 
 const values = {
-  url: 'https://api.punkapi.com/v2/beers',
+  url: 'https://raw.githubusercontent.com/rrafols/mobile_test/master/data.json',
   fetchSucceeded: fetchSucceededGnomes,
   fetchPending: fetchPendingGnomes,
   fetchFailed: fetchFailedGnomes

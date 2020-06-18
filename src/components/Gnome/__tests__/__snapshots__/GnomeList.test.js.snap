@@ -580,7 +580,9 @@ Array [
     className="c0"
     onClick={[Function]}
   >
-    <label>
+    <label
+      data-testid="more-gnomes"
+    >
       Load more gnomes
     </label>
   </button>,

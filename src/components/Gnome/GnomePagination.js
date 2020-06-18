@@ -30,7 +30,7 @@ const GnomePagination = ({ text, onClick }) => {
   }
   return (
     <GnomePaginationContainer onClick={onClickContainer}>
-      <label>{text}</label>
+      <label data-testid="more-gnomes">{text}</label>
     </GnomePaginationContainer>
   )
 }

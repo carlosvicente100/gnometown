@@ -55,7 +55,6 @@ const GnomeContainer = styled.div`
   '. friends .';
   width: 230px;
   margin: auto;
-  //margin: 20px;
   
 
 

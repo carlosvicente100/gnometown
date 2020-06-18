@@ -21,49 +21,11 @@ const HomeContainer = styled.div`
     grid-area: NoResults;
   }
 `
-//at the moment, not used
-const HomeContainer2 = styled.div`
-  font-family: verdana;
-  height: -webkit-fill-available;
-  height: 98vh;
-  background-color: #2c2c54;
-  display: grid;
-  grid-template-columns: auto 500px auto;
-  row-gap: 20px;
-  grid-template-areas:
-    ". Filters ."
-    "ItemList ItemList ItemList"
-    "NoResults NoResults NoResults"
-    ". Pagination .";
-
-  div.Filters {
-    grid-area: Filters;
-  }
-  div.ItemList {
-    grid-area: ItemList;
-  }
-  div.NoResults {
-    background:#2980b9;
-    color:white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width 100%;
-    height:300px;
-    grid-area: NoResults;
-  }
-  div.Pagination {
-    grid-area: Pagination;
-  }
-`
-
 const Home = () => {
-  const [currentPage, setCurrentPage] = useState(0)
-  const { gnomes = [], error } = useSelector((state) => state.gnomesReducer)
-  const { jobList, name, endDate } = useSelector((state) => state.filtersReducer)
+  const { gnomes = [] } = useSelector((state) => state.gnomesReducer)
+  const { jobList, name } = useSelector((state) => state.filtersReducer)
   let gnomesFiltered = gnomes
 
-  //filter
   if (gnomes.length > 0) {
     gnomesFiltered = filterByJob(jobList, gnomesFiltered)
     if (name !== '') {

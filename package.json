@@ -18,6 +18,7 @@
   "devDependencies": {
     "@testing-library/jest-dom": "^5.10.1",
     "@testing-library/react": "^10.2.1",
+    "cypress": "^4.8.0",
     "jest-styled-components": "^7.0.2",
     "parcel-bundler": "^1.12.4",
     "react-scripts": "^3.4.1",
@@ -25,9 +26,15 @@
   },
   "scripts": {
     "start": "parcel src/index.html",
-    "test": "react-scripts test --env=jsdom-fourteen"
+    "test": "react-scripts test --env=jsdom-fourteen",
+    "cypress:open": "cypress open"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "React",
+    "Redux",
+    "Sagas",
+    "Unitary Testing"
+  ],
+  "author": "Carlos Vicente Serrano",
   "license": "ISC"
 }

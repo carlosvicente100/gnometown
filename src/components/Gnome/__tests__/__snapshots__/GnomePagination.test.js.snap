@@ -38,7 +38,9 @@ exports[`GnomePagination Component Suite Snapshot check 1`] = `
   className="c0"
   onClick={[Function]}
 >
-  <label>
+  <label
+    data-testid="more-gnomes"
+  >
     multiply Gnomes
   </label>
 </button>
