@@ -26,8 +26,8 @@
   },
   "scripts": {
     "start": "parcel src/index.html",
-    "test": "react-scripts test --env=jsdom-fourteen",
-    "cypress:open": "cypress open"
+    "test": "react-scripts test --watchAll --env=jsdom-fourteen",
+    "cypress": "cypress open"
   },
   "keywords": [
     "React",

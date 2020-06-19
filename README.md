@@ -21,7 +21,7 @@ Gnometown made with React Hooks + Redux and Parcel.
 
 ## E2E Test 
 
-- npm run cypress:open
+- npm run cypress
 
 
 ## Components
